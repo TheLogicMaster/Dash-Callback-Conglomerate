@@ -9,7 +9,7 @@ setup(
     url='https://github.com/TheLogicMaster/Dash-Callback-Conglomerate',
     license='LICENSE.txt',
     description='Enable duplicated inputs and outputs, and without changing a single callback.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "Dash >= 0.38.0"
     ],
