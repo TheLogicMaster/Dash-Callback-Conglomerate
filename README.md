@@ -8,6 +8,7 @@ function, and the other method is directly calling the function with the decorat
 ```python
 import dash
 from dash_callback_conglomerate import Router
+from dash.dependencies import Input, Output
 
 app = dash.Dash(__name__)
 router = Router(app, True)
