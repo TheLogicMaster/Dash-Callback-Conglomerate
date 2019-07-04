@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='dash-callback-conglomerate',
-    version='0.1',
+    version='0.2',
     author='Justin Marentette',
     author_email='justinmarentette11@gmail.com',
     packages=['dash_callback_conglomerate'],

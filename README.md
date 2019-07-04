@@ -4,6 +4,11 @@ only returning some of the outputs registered for a callback. There are two ways
 seamless integration where the dash callback function is hijacked and replaced with a call to this modules callback
 function, and the other method is directly calling the function with the decorators.
 
+# Installation
+```
+pip install dash-callback-conglomerate
+```
+
 # Basic Usage
 ```python
 import dash
