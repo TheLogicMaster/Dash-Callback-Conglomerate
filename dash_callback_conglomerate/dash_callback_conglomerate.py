@@ -8,7 +8,7 @@ class PartialUpdate(Exception):
         self.results = results
 
 
-class CallbackConglomerate(object):
+class Router(object):
     def __init__(self, app, hijack_callbacks=False, disable_all_verification=False):
         self.app = app
         self.callbacks = []

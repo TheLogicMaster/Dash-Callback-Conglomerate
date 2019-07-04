@@ -6,7 +6,7 @@ setup(
     author='Justin Marentette',
     author_email='justinmarentette11@gmail.com',
     packages=['dash_callback_conglomerate'],
-    url='http://pypi.python.org/pypi/dash-callback-conglomerate/',
+    url='https://github.com/TheLogicMaster/Dash-Callback-Conglomerate',
     license='LICENSE.txt',
     description='Enable duplicated inputs and outputs, and without changing a single callback.',
     long_description=open('README.txt').read(),
