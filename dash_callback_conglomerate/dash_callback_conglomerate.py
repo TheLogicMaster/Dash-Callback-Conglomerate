@@ -20,6 +20,7 @@ class Router(object):
         if disable_all_verification:
             def validate(self, output, inputs, state):
                 return True
+
             setattr(app, '_validate_callback', validate)
 
     def callback(self, outputs, inputs=[], states=[]):
@@ -69,21 +70,21 @@ class Router(object):
                 parameters.append(output)
                 states.append(State(*output.split('.')))
 
-        #print(inputs)
-        #print(outputs)
-        #print(states)
-        #print(parameters)
-        #print(callback_outputs)
-        #print(qualified_callbacks)
+        # print(inputs)
+        # print(outputs)
+        # print(states)
+        # print(parameters)
+        # print(callback_outputs)
+        # print(qualified_callbacks)
 
         @self.app.original_callback(outputs, inputs, states)
         def _callbacks(*args):
-            print(args)
-            print(dash.callback_context.triggered)
+            # print(args)
+            # print(dash.callback_context.triggered)
             callback_results = []
             for output in callback_outputs:
                 callback_results.append(args[parameters.index(output)])
-            print('Previous states: {}'.format(callback_results))
+            # print('Previous states: {}'.format(callback_results))
             # Todo: Possibly sort by a priority parameter, if set, to delay call to after others with same input
             for qualified_callback in qualified_callbacks:
                 for triggered in dash.callback_context.triggered:
@@ -108,5 +109,5 @@ class Router(object):
                         else:
                             callback_results[callback_outputs.index(qualified_callback['results'][0])] = results
                         break
-            print('New states: {}'.format(callback_results))
+            # print('New states: {}'.format(callback_results))
             return callback_results
